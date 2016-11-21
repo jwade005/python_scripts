@@ -155,5 +155,5 @@ def dirty_cow():
     print('Verifying Dirty Cow Patch success.')
     os.system('sudo ./automation_scripts/verify_dirty_cow_patch.sh')
 
-dirty_cow():
+dirty_cow()
 
