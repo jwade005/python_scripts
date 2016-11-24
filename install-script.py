@@ -59,6 +59,13 @@ def publish_website():
 publish_website()
 
 import os
+def tree_install():
+	print('Installing tree command.')
+	os.system('sudo yum -y install tree')
+
+tree_install()
+
+import os
 import subprocess
 def django_install():
 	print('Installing Django Web Framework.')
