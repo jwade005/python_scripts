@@ -88,7 +88,7 @@ def mysite():
     os.system('sudo chown -R ec2—user /opt/django') 
 
     print('Polling Site Accessible from the Web.')
-    print('Django is now accessible from the web server at serverIP:8000.')
+    print('Django Polling App is now accessible from the web server at serverIP:8000/polls.')
     print('Run command: python manage.py runserver 0.0.0.0:8000')
 
 mysite()
