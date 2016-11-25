@@ -94,9 +94,16 @@ def mysite():
 mysite()
 
 import os
+    def mailx():
+    print('Installing mailx')
+    os.system('sudo yum -y install mailx')
+
+mailx()
+
+import os
 def crontab():
 	print('Creating crontab entry for Server Alert emails every 30 minutes.')
-	os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/server_alert3.sh | mail -s \"Server Alert\" wadejs@icloud.com") | crontab - ')
+	os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/automation_scripts/server_alert.sh | mail -s 'Server Alert' wadejs@icloud.com") | crontab - ')
 	os.system('crontab -l')
 
 crontab()
