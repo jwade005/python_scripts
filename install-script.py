@@ -72,7 +72,7 @@ def django_install():
 	os.chdir('install_scripts')
 	os.system('chmod +x django_install')
 	subprocess.call(['./django_install'])
-	
+
 django_install()
 
 import os
@@ -85,7 +85,7 @@ def mysite():
     os.system('sudo mv mysite /opt/django')
 
     print('Adjusting permissions for MySite.')
-    os.system('sudo chown -R ec2—user /opt/django') 
+    os.system('sudo chown -R ec2—user /opt/django')
 
     print('Polling Site Accessible from the Web.')
     print('Django Polling App is now accessible from the web server at serverIP:8000/polls.')
@@ -96,9 +96,9 @@ mysite()
 import os
 def crontab():
 	print('Creating crontab entry for Server Alert emails every 30 minutes.')
-	os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/server_alert3.sh | mail -s "Server Alert" wadejs@icloud.com") | crontab - ')
+	os.system('(crontab -l 2>/dev/null; echo "0,30 * * * * /home/ec2-user/server_alert3.sh | mail -s \"Server Alert\" wadejs@icloud.com") | crontab - ')
 	os.system('crontab -l')
-	
+
 crontab()
 
 import os
@@ -107,6 +107,9 @@ def dirty_cow():
     print('Cloning Dirty Cow Patches from jwade005s GitHub.')
     os.chdir('/home/ec2-user')
     os.system('git clone https://github.com/jwade005/automation_scripts.git')
+
+    print('Checking for Dirty Cow vulnerability...')
+    os.system('bash automation_scripts/dirty_cow_check.sh')
 
     print('Running Dirty Cow Patch script. Server will reboot - Must verify after reboot.')
     os.system('bash automation_scripts/dirty_cow_patch.sh')
