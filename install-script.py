@@ -130,3 +130,9 @@ def awscli():
    
 awscli()
 
+import os
+def boto3():
+   print('Installing Boto3')
+   os.system('sudo pip install boto3')
+   
+boto3()
