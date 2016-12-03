@@ -119,10 +119,14 @@ def dirty_cow():
     print('Checking for Dirty Cow vulnerability...')
     os.system('bash automation_scripts/dirty_cow_check.sh')
 
-    print('Running Dirty Cow Patch script. Server will reboot - Must verify after reboot.')
-    os.system('bash automation_scripts/dirty_cow_patch.sh')
-
-    print('Verifying Dirty Cow Patch success.')
-    os.system('bash automation_scripts/verify_dirty_cow_patch.sh')
-
+    print('If System Vulnerable: Run ./automation_scripts/Dirty_Cow_Patch.sh - Must verify after reboot.')
+    
 dirty_cow()
+
+import os
+def awscli():
+   print('Installing the AWS CLI')
+   os.system('sudo pip install awscli')
+   
+awscli()
+
