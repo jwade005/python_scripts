@@ -125,14 +125,14 @@ dirty_cow()
 
 import os
 def awscli():
-   print('Installing the AWS CLI')
-   os.system('sudo pip install awscli')
+    print('Installing the AWS CLI')
+    os.system('sudo pip install awscli')
    
 awscli()
 
 import os
 def boto3():
-   print('Installing Boto3')
-   os.system('sudo pip install boto3')
+    print('Installing Boto3')
+    os.system('sudo pip install boto3')
    
 boto3()
