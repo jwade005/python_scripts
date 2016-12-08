@@ -134,5 +134,6 @@ import os
 def boto3():
     print('Installing Boto3')
     os.system('sudo pip install boto3')
+   print('Install Script Complete! AWS RHEL Server ready to use.')
    
 boto3()
